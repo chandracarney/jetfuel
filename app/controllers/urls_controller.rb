@@ -16,6 +16,13 @@ class UrlsController < ApplicationController
     end
   end
 
+  def show
+    @url = Url.find_by(slug: params[:slug])
+    if @url
+      redirect_to @url.original_url
+    end
+  end
+
   private
 
   def url_params
