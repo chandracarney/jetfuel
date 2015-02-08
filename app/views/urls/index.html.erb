@@ -1,3 +1,4 @@
 <%= @urls.each do |url| %>
   <%= url.original_url %>
+  <%= "Shortened URL: #{url.slug}" %>
 <% end %>
