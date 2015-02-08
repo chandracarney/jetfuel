@@ -3,6 +3,6 @@ class Url < ActiveRecord::Base
 
   def generate_slug
     self.slug = id.to_s(36)
-    self.save
+    save
   end
 end
