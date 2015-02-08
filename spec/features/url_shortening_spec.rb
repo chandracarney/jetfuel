@@ -1,1 +1,1 @@
-require "spec-helper"
+require "rails_helper"
