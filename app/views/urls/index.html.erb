@@ -1,4 +1,7 @@
+<%= link_to "Add url", new_url_path %>
 <%= @urls.each do |url| %>
-  <%= url.original_url %>
-  <%= "Shortened URL: #{url.slug}" %>
+  <ul>
+    <li><%= url.original_url %></li>
+    <li><%= "Shortened URL: #{url.slug}" %></li>
+  </ul>
 <% end %>
