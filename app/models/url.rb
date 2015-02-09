@@ -7,12 +7,11 @@ class Url < ActiveRecord::Base
   end
 
   def increase_popularity
-    self.popularity += 1
-    save!
+    increment!(:popularity)
   end
 
   def self.sorted_by_popularity
-    all.sort_by { |url| -url.popularity }
+    order(popularity: :desc)
   end
 
   def self.sorted_by_last_created

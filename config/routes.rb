@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :urls, only: [:index, :new, :create]
   resources :urls, path: "",  param: :slug, only: [:show]
+  # get '/urls/:slug'
 
   mount Resque::Server.new, at: "/job/resque"
 end
