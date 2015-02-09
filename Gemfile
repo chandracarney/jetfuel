@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.0'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -13,6 +12,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'unicorn'
 gem 'capistrano-rails', group: :development
+gem 'faraday'
+#gem "resque", "~> 2.0.0.pre.1", github: "resque/resque"
+gem 'resque'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -20,4 +23,6 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'simplecov'
+  gem 'launchy'
 end
