@@ -4,7 +4,7 @@ describe "url listing page", type: :feature do
   before do
     @url = Url.create!(original_url: "www.example.com",
                        popularity: 1, title: "Example Domain")
-     visit root_path
+    visit root_path
   end
 
   it "lists urls with all information" do
