@@ -5,6 +5,6 @@ describe TitleFetcher do
     url = Url.create!(original_url: "https://www.example.com/")
     TitleFetcher.perform(url)
 
-    expect(url.reload.title).to eq("Example Domain")
+    expect(url.reload.title).to include("Example Domain")
   end
 end
